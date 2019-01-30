@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, Image, ScrollView, Alert, TouchableHighlight } from 'react-native';
 
 export default class App extends React.Component {
-  pressButton: () => void = () => {
+  private pressButton: () => void = () => {
     Alert.alert('Hola Tocaste la foto!')
   }
 
@@ -16,12 +16,12 @@ export default class App extends React.Component {
           <TouchableHighlight onPress={this.pressButton}>
             <Image source={require('../images/peluca.jpg')} style={styles.images} />
           </TouchableHighlight>
+
           <Text>Ramón con los amigos...</Text>
           <Image source={require('../images/amigos.jpg')} style={styles.images} />
 
           <Text>Ramón!!</Text>
           <Image source={require('../images/ramon.jpg')} style={styles.images} />
-
           <Text style={{ marginBottom: 20 }}>Esto fue la App de Rámon!!</Text>
         </View>
       </ScrollView>
@@ -53,6 +53,4 @@ const styles = StyleSheet.create({
     marginRight: 10,
     marginLeft: 10,
     marginTop: 15
-  }
-
-});
+  }});
